@@ -17,6 +17,7 @@ export default function Navbar() {
                         <Button href="/about" variant="contained">About</Button>
                         <Button href="/products" variant="contained" endIcon={<ProductionQuantityLimitsIcon />}>Produto</Button>
                         <Button href="/contact" variant="contained" endIcon={<ContactPageIcon />}>Contatos</Button>
+                        <Button href="/todo" variant="contained">Todos</Button>
                     </Box>
                 </React.Fragment>
             </Container>
