@@ -1,4 +1,5 @@
 import { Container } from "@mui/system"
+import Link from "next/link"
 
 export async function getStaticProps() {
     const data = await fetch('https://jsonplaceholder.typicode.com/todos')
@@ -17,7 +18,7 @@ export default function Todo({ todos }) {
             <h1>Tarefas para fazer:</h1>
             <ul>
                 {todos.map((todo) => (
-                    <li key={todo.id}>{todo.title}</li>
+                    <li key={todo.id}>{todo.title} - <Link href={`/todos/${todo.id}`}><a>Ver mais</a></Link></li>
                 ))}
             </ul>
         </Container>
